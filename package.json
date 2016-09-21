@@ -4,7 +4,9 @@
   "description": "Tween sentiment analysis integrated into Google Maps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "chimp --watch",
+    "start": "node server.js",
+    "dev:start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,9 @@
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "chimp": "^0.40.7",
+    "cucumber-assert": "^1.0.4"
   }
 }

@@ -8,5 +8,10 @@ module.exports = {
     protocol: 'http',
     hostname: 'localhost',
     port: 3000
+  },
+  production: {
+    protocol: 'https',
+    hostname: 'tweetheatmap.herokuapp.com',
+    port: process.env.PORT
   }
 }

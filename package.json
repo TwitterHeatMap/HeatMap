@@ -23,10 +23,12 @@
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "express": "^4.14.0",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "twit": "^2.2.5"
   },
   "devDependencies": {
     "chimp": "^0.40.7",
-    "cucumber-assert": "^1.0.4"
+    "cucumber-assert": "^1.0.4",
+    "dotenv": "^2.0.0"
   }
 }

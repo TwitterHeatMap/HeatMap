@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   request
     .get(`${url}/api/v1/`)
     .end((err, res) => {
-      console.log(res)
+      console.log(res.text)
     })
 })
 

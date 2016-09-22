@@ -7,6 +7,7 @@
     "dev": "webpack-dev-server --content-base public/",
     "test": "chimp --watch",
     "start": "NODE_ENV=production node server.js",
+    "build": "webpack -p",
     "dev:start": "nodemon server.js"
   },
   "repository": {
@@ -29,6 +30,7 @@
     "superagent": "^2.3.0"
   },
   "devDependencies": {
+    "babel-loader": "^6.2.5",
     "chimp": "^0.40.7",
     "cucumber-assert": "^1.0.4",
     "handlebars": "^4.0.5",

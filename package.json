@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --content-base public/",
+    "dev:start": "nodemon server.js",
     "test": "chimp --watch",
-    "start": "NODE_ENV=production node server.js",
     "build": "webpack -p",
-    "dev:start": "nodemon server.js"
+    "start": "NODE_ENV=production node server.js"
   },
   "repository": {
     "type": "git",
@@ -27,8 +27,9 @@
     "dotenv": "^2.0.0",
     "express": "^4.14.0",
     "path": "^0.12.7",
-    "superagent": "^2.3.0"
-    "twit": "^2.2.5"
+    "superagent": "^2.3.0",
+    "twit": "^2.2.5",
+    "unirest": "^0.5.1"
   },
   "devDependencies": {
     "babel-loader": "^6.2.5",
@@ -37,7 +38,7 @@
     "handlebars": "^4.0.5",
     "handlebars-loader": "^1.4.0",
     "webpack": "^2.1.0-beta.25",
-    "webpack-dev-server": "^1.16.1"
+    "webpack-dev-server": "^1.16.1",
     "dotenv": "^2.0.0"
   }
 }

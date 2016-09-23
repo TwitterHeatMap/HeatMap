@@ -1,8 +1,6 @@
 var Twit = require('twit')
 require('dotenv').config()
 
-var userInput = 'donald trump'
-
 var T = new Twit({
   consumer_key:         process.env.TWITTER_CONSUMER_KEY,
   consumer_secret:      process.env.TWITTER_CONSUMER_SECRET,
@@ -11,10 +9,11 @@ var T = new Twit({
   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
 })
 
-
-T.get('search/tweets', { q: userInput, count:10 }, function(err, data, response) {
-  console.log(data)
-  // data.statuses.forEach( function (status) {
-  //   console.log(status.text)
-  // })
-})
+module.exports = function (input) {
+  return T.get('search/tweets', { q: input, count:10 })
+          .then(function (result) {
+            return result.data.statuses.map(function (status) {
+              return status.text
+            })
+          })
+}

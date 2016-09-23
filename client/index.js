@@ -9,8 +9,8 @@ var changeGradient = mapFunctions.changeGradient
 var changeRadius = mapFunctions.changeRadius
 var changeOpacity = mapFunctions.changeOpacity
 var map = initMap()
+console.log(map.getCenter());
 console.log(map.getCenter().lat());
-var mapCenter = map.getCenter()
 document.addEventListener('DOMContentLoaded', function () {
   bindEventListeners()
   console.log(url);
@@ -24,7 +24,7 @@ function bindEventListeners () {
       var userInput = getFormData(form).userInput
       request
       .get(`${url}/api/v1/`)
-      .query({userInput: userInput, lat: mapCenter.lat(), lng: mapCenter.lng()})
+      .query({userInput: userInput, lat: map.getCenter().lat(), lng: map.getCenter().lng()})
       .end((err, res) => {
         console.log(res.text)
       })

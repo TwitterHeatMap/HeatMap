@@ -8,9 +8,9 @@ app.use(bodyParser.json())
 app.use('/', express.static(path.join(__dirname, '/public')))
 app.use('/api/v1/', api)
 
-app.get('/', function(req, res, next) {
-  res.send('<h1>hello world.</h1>')
-})
+// app.get('/', function(req, res, next) {
+//   res.send('<h1>hello world.</h1>')
+// })
 // error handler
 app.use(function(err, req, res, next) {
   res.status(err.status || 500)

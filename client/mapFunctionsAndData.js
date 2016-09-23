@@ -10,6 +10,7 @@ function initMap() {
     data: getPoints(),
     map: map
   });
+  return map
 }
 
 function toggleHeatmap() {
@@ -581,15 +582,15 @@ function getPoints() {
 }
 
 module.exports = {
-  initMap,
-  toggleHeatmap,
-  changeGradient,
-  changeRadius,
-  changeOpacity,
-  setCenterToNewYork,
-  setCenterToLA,
-  setCenterToWashingtonDC,
-  setCenterToSydney,
-  setCenterToCanberra,
-  setCenterToWellington
+  initMap: initMap,
+  toggleHeatmap: toggleHeatmap,
+  changeGradient: changeGradient,
+  changeRadius: changeRadius,
+  changeOpacity: changeOpacity,
+  setCenterToNewYork: setCenterToNewYork,
+  setCenterToLA: setCenterToLA,
+  setCenterToWashingtonDC: setCenterToWashingtonDC,
+  setCenterToSydney: setCenterToSydney,
+  setCenterToCanberra: setCenterToCanberra,
+  setCenterToWellington: setCenterToWellington
   }

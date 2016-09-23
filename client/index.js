@@ -9,18 +9,60 @@ var changeRadius = mapFunctions.changeRadius
 var changeOpacity = mapFunctions.changeOpacity
 initMap()
 document.addEventListener('DOMContentLoaded', function () {
+  bindEventListeners()
   console.log(url);
   request
-    .get(`${url}/api/v1/`)
-    .end((err, res) => {
-      console.log(res.text)
-    })
+  .get(`${url}/api/v1/`)
+  .end((err, res) => {
+    console.log(res.text)
+  })
 })
 
 function refreshContent (tweets) {
   var div = document.createElement('div')
   document.body.appendChild(div)
-  bindEventListeners(tweets)
+
 }
 
-function bindEventListeners () {}
+function bindEventListeners () {
+  document.getElementById("toggleHeatmap")
+  .addEventListener("click", function(e) {
+    toggleHeatmap()
+  })
+  document.getElementById("changeGradient")
+  .addEventListener("click", function(e) {
+    changeGradient()
+  })
+  document.getElementById("changeRadius")
+  .addEventListener("click", function(e) {
+    changeRadius()
+  })
+  document.getElementById("changeOpacity")
+  .addEventListener("click", function(e) {
+    changeOpacity()
+  })
+  document.getElementById("setCenterToNewYork")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToNewYork()
+  })
+  document.getElementById("setCenterToLA")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToLA()
+  })
+  document.getElementById("setCenterToWashingtonDC")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToWashingtonDC()
+  })
+  document.getElementById("setCenterToSydney")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToSydney()
+  })
+  document.getElementById("setCenterToCanberra")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToCanberra()
+  })
+  document.getElementById("setCenterToWellington")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToWellington()
+  })
+}

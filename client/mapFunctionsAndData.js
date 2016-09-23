@@ -2,9 +2,8 @@ var map, heatmap;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
-    center: {lat: 37.775, lng: -122.434},
-    mapTypeId: 'satellite'
+    zoom: 14,
+    center: {lat: 40.7253809, lng: -74.0058887},
   });
 
   heatmap = new google.maps.visualization.HeatmapLayer({
@@ -43,6 +42,36 @@ function changeRadius() {
 
 function changeOpacity() {
   heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+}
+
+function setCenterToNewYork() {
+  map.setCenter({lat: 40.7253809, lng: -74.0058887})
+  map.setZoom(14)
+}
+
+function setCenterToLA() {
+  map.setCenter({lat: 34.0209282, lng: -118.4918063})
+  map.setZoom(14)
+}
+
+function setCenterToWashingtonDC() {
+  map.setCenter({lat: 38.8975783, lng: -77.0408178})
+  map.setZoom(15)
+}
+
+function setCenterToSydney() {
+  map.setCenter({lat: -33.8718624, lng: 151.1931384})
+  map.setZoom(14)
+}
+
+function setCenterToCanberra() {
+  map.setCenter({lat: -35.2813043, lng: 149.1204446})
+  map.setZoom(15)
+}
+
+function setCenterToWellington() {
+  map.setCenter({lat: -41.2904608, lng: 174.7776177})
+  map.setZoom(15)
 }
 
 // Heatmap data: 500 Points
@@ -556,5 +585,11 @@ module.exports = {
   toggleHeatmap,
   changeGradient,
   changeRadius,
-  changeOpacity
+  changeOpacity,
+  setCenterToNewYork,
+  setCenterToLA,
+  setCenterToWashingtonDC,
+  setCenterToSydney,
+  setCenterToCanberra,
+  setCenterToWellington
   }

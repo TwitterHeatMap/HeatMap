@@ -13,9 +13,9 @@
     <button id="setCenterToSydney">Sydney</button>
     <button id="setCenterToCanberra">Canberra</button>
     <button id="setCenterToWellington">Wellington</button>
-    <form action="demo_form.asp">
-      <input placeholder="keyword" type="text" name="keywordInput">
-      <input type="submit" value="Submit">
+    <form id="form-keyword" action="/api/v1/" method="GET">
+      <input placeholder="keyword" type="text" name="userInput">
+      <input id="submit_keyword" type="submit" value="Submit">
     </form>
     <button id="toggleHeatmap">Toggle Heatmap</button>
     <button id="changeGradient">Change gradient</button>

@@ -13,7 +13,6 @@ router.get('/', (req, res, next) => {
       console.log(sentiment(data))
       return sentiment(data)
     })
-
 })
 
 module.exports = router

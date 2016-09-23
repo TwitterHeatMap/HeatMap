@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>TwitterHeatMap</title>
-    <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
-  </head>
-  <body>
-    <div id="floating-panel">
-      <button id="setCenterToNewYork">New York</button>
-      <button id="setCenterToLA">LA</button>
-      <button id="setCenterToWashingtonDC">Washington DC</button>
-      <button id="setCenterToSydney">Sydney</button>
-      <button id="setCenterToCanberra">Canberra</button>
-      <button id="setCenterToWellington">Wellington</button>
-      <br>
-      <button id="toggleHeatmap">Toggle Heatmap</button>
-      <button id="changeGradient">Change gradient</button>
-      <button id="changeRadius">Change radius</button>
-      <button id="changeOpacity">Change opacity</button>
-    </div>
+<head>
+  <meta charset="utf-8">
+  <title>TwitterHeatMap</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+</head>
+<body>
+  <div id="floating-panel">
+    <button id="setCenterToNewYork">New York</button>
+    <button id="setCenterToLA">LA</button>
+    <button id="setCenterToWashingtonDC">Washington DC</button>
+    <button id="setCenterToSydney">Sydney</button>
+    <button id="setCenterToCanberra">Canberra</button>
+    <button id="setCenterToWellington">Wellington</button>
+    <form action="demo_form.asp">
+      <input placeholder="keyword" type="text" name="keywordInput">
+      <input type="submit" value="Submit">
+    </form>
+    <button id="toggleHeatmap">Toggle Heatmap</button>
+    <button id="changeGradient">Change gradient</button>
+    <button id="changeRadius">Change radius</button>
+    <button id="changeOpacity">Change opacity</button>
 
-    <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiaEx5ap7xfMbvW2lJzd1yyh0j_m2W43M&libraries=visualization">
-    </script>
-    <script src="bundle.js"></script>
-  </body>
+  </div>
+
+  <div id="map"></div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiaEx5ap7xfMbvW2lJzd1yyh0j_m2W43M&libraries=visualization">
+  </script>
+  <script src="bundle.js"></script>
+</body>
 </html>

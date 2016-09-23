@@ -41,4 +41,28 @@ function bindEventListeners () {
   .addEventListener("click", function(e) {
     changeOpacity()
   })
+  document.getElementById("setCenterToNewYork")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToNewYork()
+  })
+  document.getElementById("setCenterToLA")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToLA()
+  })
+  document.getElementById("setCenterToWashingtonDC")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToWashingtonDC()
+  })
+  document.getElementById("setCenterToSydney")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToSydney()
+  })
+  document.getElementById("setCenterToCanberra")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToCanberra()
+  })
+  document.getElementById("setCenterToWellington")
+  .addEventListener("click", function(e) {
+    mapFunctions.setCenterToWellington()
+  })
 }
